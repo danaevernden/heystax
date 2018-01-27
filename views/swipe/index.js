@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import FooterMenu from '../../components/footer_menu';
 
 //swipe through people here - if you want to switch to another stax, click the button
 export default class Swipe extends React.Component {
@@ -16,6 +17,7 @@ export default class Swipe extends React.Component {
               navigate('MyStax')
             }
           />
+          <FooterMenu/>
       </View>
     );
   }

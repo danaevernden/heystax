@@ -10,22 +10,31 @@ import MyProfile from './views/settings/my_profile';
 import Explore from './views/explore';
 import AboutHeystax from './views/settings/about_heystax';
 import Login from './views/login';
-import Messages from './views/messages';
+import BrynnMessages from './views/messages/brynn';
+import AnneMessages from './views/messages/anne';
 import SimpleTabs from './simple_tabs_example';
+import Inbox from './views/inbox';
+import EditProfile from './views/edit_profile';
+import SwipingTest from './views/swiping_test';
 
 const Heystax = StackNavigator({
-	
-  Messages: {screen: Messages},
+  SwipingTest: {screen: SwipingTest},
+  Settings: {screen: Settings},
+  Inbox: {screen: Inbox},
+  Swipe: {screen: Swipe},
+  BrynnMessages: {screen: BrynnMessages},
+  AnneMessages: {screen: AnneMessages},
   Login: {screen: Login},
   SplashPage: {screen: SplashPage},
-  Swipe: {screen: Swipe},
-  Settings: {screen: Settings},
   Preferences: {screen: Preferences},
   MyProfile: {screen: MyProfile},
   AboutHeystax: {screen: AboutHeystax},
   Explore: {screen: Explore},
   MyStax: {screen: MyStax},
+  EditProfile: {screen: EditProfile},
 });
+
+
 
 export default class App extends React.Component {
   render() {

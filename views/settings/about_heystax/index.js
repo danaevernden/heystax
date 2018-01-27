@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-
 import { StackNavigator } from 'react-navigation';
 
 //insert a blurb about how awesome heystax is
+//no footer necessary
 export default class AboutHeystax extends React.Component {
   render() {
     return (

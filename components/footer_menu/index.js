@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import SettingsIcon from 'react-native-vector-icons/SimpleLineIcons';
+import UsersIcon from 'react-native-vector-icons/Entypo';
+import StaxIcon from 'react-native-vector-icons/Feather';
+import MessagesIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import Explore from '../../views/explore';
-import Messages from '../../views/messages';
 
+//="#2DFFAB" accent color
 
-
-class FooterMenu extends React.Component {
-
+export default class FooterMenu extends React.Component {
 
   render() {
-	    const { navigate } = this.props.navigation;
 
     return (
       <BottomNavigation
@@ -21,32 +22,37 @@ class FooterMenu extends React.Component {
         onTabChange = {this.onTabChange}
       >
         <Tab
-          activeLabelColor="#2DFFAB"
-          barBackgroundColor="#000000"
-          label="Say Hey"
+          activeLabelColor="#000000"
+          barBackgroundColor="#FFFFFF"
+          label="Discover"
 
-          icon={<Icon size={24} color="#2DFFAB" name="tv" />}
+          icon={<StaxIcon size={24} color="#000000" name="layers" />}
         />
         <Tab
-          barBackgroundColor="#00796B"
-          label="Explore"
-          icon={<Icon size={24} color="white" name="music-note" />}
-          onPress={() => this.props.navigation.navigate('Swipe')}
-          // onPress={() => navigation.navigate('Swipe')}
+          activeLabelColor="#000000"
+          barBackgroundColor="#FFFFFF"
+          label="Likes You"
+          icon={<UsersIcon size={24} color="#000000" name="users" />}
+          onTabChange={() =>  navigate('MyMatches')}
+           // onPress={() => navigation.navigate('Swipe')}
         />
         <Tab
-          barBackgroundColor="#5D4037"
-          label="Messages"
-          icon={<Icon size={24} color="white" name="book" />}
+          activeLabelColor="#000000"
+          barBackgroundColor="#FFFFFF"
+          label="Say Hey"
+          icon={<MessagesIcon size={24} color="#000000" name="message-text-outline" />}
+          onTabChange={() =>  navigate('Messages')}
+           // onPress={() => navigation.navigate('Inbox')}
         />
         <Tab
-          barBackgroundColor="#3E2723"
-          label="Preferences"
-          icon={<Icon size={24} color="white"  />}
+          activeLabelColor="#000000"
+          barBackgroundColor="#FFFFFF"
+          label="Settings"
+          icon={<SettingsIcon size={24} color="#000000" name="settings" />}
+          onTabChange={() =>  navigate('Settings')}
+           // onPress={() => navigation.navigate('Swipe')}
         />
       </BottomNavigation>
     )
   }
 }
-
-export default FooterMenu;

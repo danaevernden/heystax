@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-
 import { StackNavigator } from 'react-navigation';
 
 //edit my profile here - very very basic qualities to start, then expand to other stax
+//no footer necessary
 export default class MyProfile extends React.Component {
   render() {
     return (

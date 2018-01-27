@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-
 import { StackNavigator } from 'react-navigation';
 
 //edit preferences - what you are looking for from other people in the stax you are a member of
+//no footer necessary
 export default class Preferences extends React.Component {
   render() {
     return (
