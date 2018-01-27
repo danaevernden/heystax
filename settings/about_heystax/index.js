@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-
-export default class AboutStax extends React.Component {
+//insert a blurb about how awesome heystax is
+export default class AboutHeystax extends React.Component {
   render() {
     return (
       <View style={styles.container}>

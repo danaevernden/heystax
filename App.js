@@ -8,19 +8,21 @@ import Swipe from './swipe';
 import Preferences from './settings/preferences';
 import MyProfile from './settings/my_profile';
 import Explore from './explore';
-import AboutStax from './about_stax';
+import AboutHeystax from './settings/about_heystax';
 import Login from './login';
+import Messages from './messages';
 
 const Heystax = StackNavigator({
-  Preferences: {screen: Preferences},
-  MyStax: {screen: MyStax},
-  Settings: {screen: Settings},
+  Login: {screen: Login},
   SplashPage: {screen: SplashPage},
   Swipe: {screen: Swipe},
+  Settings: {screen: Settings},
+  Preferences: {screen: Preferences},
+  MyProfile: {screen: MyProfile},
+  AboutHeystax: {screen: AboutHeystax},
   Explore: {screen: Explore},
-  AboutStax: {screen: AboutStax},
-  Login: {screen: Login},
-  MyProfile: {screen: MyProfile}
+  MyStax: {screen: MyStax},
+  Messages: {screen: Messages}
 });
 
 export default class App extends React.Component {

@@ -2,20 +2,33 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-//cool logo here!
-export default class SplashPage extends React.Component {
+//user is directed to messages first, to encourage meeting up quicker!
+
+export default class Messages extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
 
     return (
       <View style={styles.container}>
-        <Text>splash page</Text>
+        <Text>messages</Text>
         <Button
-            title="messages"
+            title="swipe"
             onPress={() =>
-              navigate('Messages')
+              navigate('Swipe')
             }
           />
+        <Button
+            title="settings"
+            onPress={() =>
+            navigate('Settings')
+          }
+        />
+        <Button
+            title="explore"
+            onPress={() =>
+            navigate('Explore')
+          }
+        />
       </View>
     );
   }

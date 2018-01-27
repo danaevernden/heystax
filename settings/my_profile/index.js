@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-
+//edit my profile here - very very basic qualities to start, then expand to other stax
 export default class MyProfile extends React.Component {
   render() {
     return (
