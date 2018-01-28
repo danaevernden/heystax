@@ -1,3 +1,32 @@
+## Heystax
+
+###Inspiration
+
+We wanted to create a solution that would help people come together around interests and causes in a more meaningful way. We felt that the current offerings fell short in this because they lacked accountability, intentionality and/or depth. By focusing on one-on-one relationships centered on shared interests we are hoping that Heystax will be the quality over quantity solution. From an entrepreneurial standpoint, we saw a strong market opportunity for a platform that gave people the ability to create these groups given the proliferation of "tinder for..." mobile applications. By creating the central hub and standardized usability, we believe Heystax will be the chosen platform for these use cases. Heystax will have an advantage over separate disparate apps in that having them together will cause a synergistic effect on usage across all of the groups and reduce attrition as a user will only need to leave a group when they no longer find themselves in that category rather than deleting the app altogether.
+
+###What it does
+
+Heystax helps people build deeper connections quicker through intentionality and accountability. After creating a basic profile, you join "stax" that you are interested in. Within each stack, you use a swiping functionality to find matches within that group. This is the intentionality component. By having dedicated stax for each interest, the intentions of each user are made more clear. Once a connection is made, depth is promoted through randomized meaningful conversation starters that are automatically populated within the direct message window.
+
+###How we built it
+
+Being that none of our small team has deep coding knowledge, we opted to build a prototype to show intended functionality while separately building the react native components that we will eventually connect it with.
+Challenges we ran into
+
+We had to find a way to convey our project with very limited coding knowledge. This required a lot of trial and error and quick learning curves with prototyping applications.
+Accomplishments that we're proud of
+
+We all developed useful skills by hacking our learning in this project. Our 3 member team became skilled at UI/UX design, interactive prototyping and react native as well as the initial stages of product management.
+What we learned
+
+###What's next for Heystax
+
+We hope to release Heystax within the next few months with just a couple stax within it. There a number of other features we have in the pipeline as well that contribute to our overall goals of accountability, intentionality and depth. We plan on including an interactive roadmap to prioritize these features within the actual application so that users can contribute to it. We have a challenging back end database to build in the mean time and plan on finding a more experienced team member to head that up.
+
+###Built With
+react-native
+
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
