@@ -17,6 +17,7 @@ populated from facebook?
 | age | number |
 
 ###preferences table
+
 | Column        | Type           |
 | ------------- |:-------------:|
 | id      | number |
@@ -44,6 +45,7 @@ populated from facebook?
 
 ### stax_with_users table
 ####includes a short general bio
+
 | Column        | Type           |
 | ------------- |:-------------:|
 | stax_id      | number |
@@ -95,6 +97,7 @@ populated from facebook?
 
 ###messages table
 -- how to load only a few at a time?
+
 | Column        | Type           |
 | ------------- |:-------------:|
 | id      | number |
@@ -105,6 +108,7 @@ populated from facebook?
 
 ###routes outline
 -- how to pull alerts?
+
 | Page        | Action           | Logic |
 | ------------- |:-------------:|:-------------:|
 | login/sign up      | none | n/a |
