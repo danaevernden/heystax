@@ -6,7 +6,7 @@ import MultiSlider from '@ptomasroos/react-native-multi-slider';
 
 
 //fix warning
-export default class JoinWomentors extends Component {
+export default class DistanceWidget extends Component {
   state = {
    sliderOneChanging: false,
    sliderTwoChanging: false,
@@ -66,20 +66,11 @@ export default class JoinWomentors extends Component {
     return (
       <Container>
         <Header>
-          <WomentorsIcon name="female" style={{ color: '#ED4A6A', fontSize: 40}} />
-          <WomentorsIcon name="female" style={{ color: '#ED4A6A', fontSize: 40}} />
-          <Title>Join WOMENTORS</Title>
+          <Title> WOMENTORS Preferences</Title>
         </Header>
         <Content>
-        <List>
-           <ListItem itemDivider>
-             <Text>What have you created that you are most proud of?</Text>
-           </ListItem>
-        </List>
-          <Item success>
-            <Input placeholder='my family, a big project'/>
-          </Item>
-            <View style={styles.sliders}>
+
+          <View style={styles.sliders}>
                     <View style={styles.sliderOne}>
                       <Text style={styles.text}>Maximum Distance in miles:</Text>
                       <Text style={[styles.text, this.state.sliderOneChanging]}>
@@ -93,43 +84,8 @@ export default class JoinWomentors extends Component {
                       onValuesChange={this.sliderOneValuesChange}
                       onValuesChangeFinish={this.sliderOneValuesChangeFinish}
                     />
-
-          <View style={styles.sliderOne}>
-            <Text style={styles.text}>Acceptable age range:</Text>
-            <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
-            <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
-          </View>
-          <MultiSlider
-            values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
-            sliderLength={280}
-            onValuesChange={this.multiSliderValuesChange}
-            min={18}
-            max={80}
-            step={2}
-            allowOverlap
-            snapped
-          />
-          <View style={styles.sliderOne}>
-            <Text style={styles.text}>Years of Experience:</Text>
-            <Text style={[styles.text, this.state.sliderTwoChanging]}>
-              {this.state.sliderTwoValue}
-            </Text>
-          </View>
-          <MultiSlider
-            values={this.state.sliderTwoValue}
-            sliderLength={280}
-            onValuesChangeStart={this.sliderTwoValuesChangeStart}
-            onValuesChange={this.sliderTwoValuesChange}
-            onValuesChangeFinish={this.sliderTwoValuesChangeFinish}
-          />
           </View>
 
-          <Right>
-            <Button block style={{backgroundColor: '#2DFFAB'}}
-            onPress={() => navigate('Swipe')}>
-              <Text>Submit</Text>
-            </Button>
-          </Right>
         </Content>
       </Container>
     );

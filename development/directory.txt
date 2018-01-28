@@ -1,0 +1,17 @@
+login/sign up
+  splash page (waiting to load)
+    >messages
+      message with user (examples of brynn and anne)
+    likes me
+    swipe_test (or remove swipe functionality?)
+      grid of categories
+        grid of stax
+          about womentors (stax example)
+            join womentors
+              >swipe in womentors
+    Settings
+      main_page
+        edit_profile (or create profile if empty?)
+        Preferences
+          >widgets (DistanceWidget)
+        about_heystax

@@ -1,24 +1,88 @@
-import React from 'react';
-import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, View} from 'react-native';
+import { Container, Header, Content, Item, Input, Icon, Title, Body, List, Text, ListItem, Left, Right, Button, Separator } from 'native-base';
 
-//edit preferences - what you are looking for from other people in the stax you are a member of
-//no footer necessary
-export default class Preferences extends React.Component {
+
+//fix warning
+export default class Preferences extends Component {
+
   render() {
+    const { navigate } = this.props.navigation;
+
     return (
-      <View style={styles.container}>
-        <Text>preferences</Text>
-      </View>
+      <Container>
+        <Header>
+          <Title>Preferences</Title>
+        </Header>
+        <Content>
+        <Separator bordered>
+          <Text>WOMENTORS Preferences</Text>
+        </Separator>
+        <List>
+        <Button style={{backgroundColor:'white'}}
+        onPress={() =>
+          navigate('AgeRangeWidget')
+        }>
+          <Left>
+             <Body>
+             <Text>Age Range</Text>
+             </Body>
+          </Left>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+          </Button>
+        </List>
+          <List>
+          <Button style={{backgroundColor:'white'}}
+          onPress={() =>
+            navigate('DistanceWidget')
+          }>
+            <Left>
+               <Body>
+               <Text>Distance</Text>
+               </Body>
+            </Left>
+            <Right>
+              <Icon name="arrow-forward"/>
+            </Right>
+            </Button>
+          </List>
+          <List>
+          <Button style={{backgroundColor:'white'}}
+          onPress={() =>
+            navigate('QuestionsWidget')
+          }>
+            <Left>
+               <Body>
+                <Text>Questions</Text>
+               </Body>
+            </Left>
+               <Right>
+                <Icon name="arrow-forward" />
+              </Right>
+            </Button>
+          </List>
+          <List>
+          <Button style={{backgroundColor:'white'}}
+          onPress={() =>
+            navigate('YearsOfExperienceWidget')
+          }>
+            <Left>
+               <Body>
+               <Text>Years of Experience</Text>
+               </Body>
+            </Left>
+            <Right>
+              <Icon name="arrow-forward" />
+            </Right>
+            </Button>
+          </List>
+          <Separator bordered>
+            <Text>Accountabilibuddy Preferences</Text>
+          </Separator>
+        </Content>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

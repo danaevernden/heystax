@@ -1,11 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, Image, Button, DatePickerIOS } from 'react-native';
+import { StyleSheet, TextInput, View, Image, DatePickerIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import FooterMenu from '../../components/footer_menu';
-import { Card, List, ListItem, Header } from 'react-native-elements';
-
+import { Container, Header, Content, Footer, FooterTab, Button, Title, Icon, Text, List, Right, Left, Body, Thumbnail, ListItem } from 'native-base';
 //user is directed to messages first, to encourage meeting up quicker!
-const users = [
+const items = [
  {
     name: 'brynn',
     avatar: require('../../images/brynn.jpg'),
@@ -27,13 +26,10 @@ export default class Inbox extends React.Component {
     const { navigate } = this.props.navigation;
 
     return (
-        <View>
-        <Header
-          statusBarProps={{ barStyle: 'light-content' }}
-          centerComponent={{ text: 'Messages', style: { color: '#000000'} }}
-          outerContainerStyles={{ backgroundColor: '#FFFFFF' }}
-          innerContainerStyles={{ justifyContent: 'space-around',}}
-        />
+        <Container>
+        <Header>
+          <Title>Messages</Title>
+        </Header>
         <Button
             title="settings"
             onPress={() =>
@@ -41,23 +37,31 @@ export default class Inbox extends React.Component {
             }
         />
 
-        <List containerStyle={{marginBottom: 250}}>
-          {
-            users.map((u, i) => (
-              <ListItem
-                roundAvatar
-                avatar={u.avatar}
-                key={i}
-                title={u.name}
-                subtitle={u.subtitle}
-                onPress={() => navigate(u.messageUser)}
-              />
-            ))
-          }
-        </List>
+      <List dataArray={items}
+
+           renderRow={(items) =>
+             <Container>
+             <Button style={{backgroundColor:'white', height:80}}
+             onPress={() =>
+               navigate(items.messageUser)
+             }>
+               <Left>
+                  <Thumbnail source={items.avatar} />
+                </Left>
+                <Body>
+                  <Text>{items.name}</Text>
+                </Body>
+             <Text note>{items.subtitle}</Text>
+             <Right>
+                <Icon name="arrow-forward" />
+            </Right>
+             </Button>
+            </Container>
+           }>
+         </List>
 
         <FooterMenu/>
-      </View>
+      </Container>
     );
   }
 }

@@ -18,24 +18,31 @@ import Explore from './views/explore/start_grid';
 import Mentorship from './views/explore_select/mentorship';
 import Womentors from './views/explore/stax/womentors/about';
 import JoinWomentors from './views/explore/stax/womentors/join';
+import DistanceWidget from './views/widgets/distance_widget';
+import AgeRangeWidget from './views/widgets/age_range_widget';
+import QuestionsWidget from './views/widgets/questions_widget';
+import YearsOfExperienceWidget from './views/widgets/years_of_experience_widget';
 
 const Heystax = StackNavigator({
-  JoinWomentors: {screen: JoinWomentors},
-  Womentors: {screen: Womentors},
-  Explore: {screen: Explore},
-  Mentorship: {screen: Mentorship},
-  Swipe: {screen: Swipe},
-  Settings: {screen: Settings},
   Inbox: {screen: Inbox},
+  EditProfile: {screen: EditProfile},
+  Preferences: {screen: Preferences},
+  DistanceWidget: {screen: DistanceWidget},
+  QuestionsWidget: {screen: QuestionsWidget},
+  AgeRangeWidget: {screen: AgeRangeWidget},
+  YearsOfExperienceWidget: {screen: YearsOfExperienceWidget},
+  Swipe: {screen: Swipe},
+  Mentorship: {screen: Mentorship},
+  Explore: {screen: Explore},
+  Womentors: {screen: Womentors},
+  JoinWomentors: {screen: JoinWomentors},
+  Settings: {screen: Settings},
   BrynnMessages: {screen: BrynnMessages},
   AnneMessages: {screen: AnneMessages},
   Login: {screen: Login},
   SplashPage: {screen: SplashPage},
-  Preferences: {screen: Preferences},
-  MyProfile: {screen: MyProfile},
   AboutHeystax: {screen: AboutHeystax},
   MyStax: {screen: MyStax},
-  EditProfile: {screen: EditProfile},
 });
 
 

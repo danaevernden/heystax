@@ -1,44 +1,48 @@
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Platform, StyleSheet, Text, View} from 'react-native';
 import GridLayout from 'react-native-layout-grid';
+import { Button } from 'native-base';
+import FooterMenu from '../../../components/footer_menu';
 
-export default class App extends Component<{}> {
+//cant get navigate to work
+
+const items = [
+{  name: 'WOMENTORS', color: 'grey', page: 'Womentors'},
+{  name: 'Friends of the Homeless', color: 'purple', page: 'FriendsOfHomeless'},
+{  name: 'Music Lessons', color: 'brown', page: 'MusicLessons'},
+];
+
+export default class App extends Component {
 
   renderGridItem = (item) => (
-    <View style={{height: 150,backgroundColor:item.color, padding: 10}}>
-      <View style={styles.flex} />
-      <Text style={styles.name}>
-        {item.name}
-      </Text>
+    <View style={{height: 150,backgroundColor:'#CCCCCC', padding: 10}}>
+      <Button
+      onPress={() => navigate('Settings')}>
+        <View style={styles.flex} />
+        <Text style={styles.name}>
+          {items.name}
+        </Text>
+      </Button>
     </View>
   );
 
   render() {
-    const items = [];
+
+    const items2 = [];
     for (let x = 1; x <= 30; x++) {
-      items.push({
+      items2.push({
         name: `Grid ${x}`,
         color: '#CCCCCC',
         page: 'Mentorship'
       });
     }
 
-    const items_test = [
-    {  name: 'Nonprofit Involvement', color: 'grey', page: 'Nonprofit'},
-    {  name: 'Social Justice Buddies', color: 'purple', page: 'SJBuddies'},
-    {  name: 'Accountabilibuddies', color: 'blue', page: 'Accountability'},
-    {  name: 'Mentorship', color: 'green', page: 'Mentorship'},
-    {  name: 'Coffee Shop Conversations', color: 'orange', page: 'CoffeeShop'},
-    ]
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Explore Stax
+          Learn from Others
         </Text>
         <View style={styles.flex}>
           <GridLayout
@@ -47,15 +51,14 @@ export default class App extends Component<{}> {
             renderItem={this.renderGridItem}
           />
         </View>
+      <FooterMenu/>
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
     backgroundColor: '#F5FCFF',
   },
   welcome: {
