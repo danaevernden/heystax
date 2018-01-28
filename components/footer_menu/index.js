@@ -9,7 +9,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 import Explore from '../../views/explore';
 
 //="#2DFFAB" accent color
-
+//also try icon footer with text from nativebase
 export default class FooterMenu extends React.Component {
 
   render() {

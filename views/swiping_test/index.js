@@ -1,19 +1,37 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
-import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
+import { Image, StyleSheet } from 'react-native';
+import { Container, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Header, Title, Button } from 'native-base';
+import LocIcon from 'react-native-vector-icons/SimpleLineIcons';
+import FooterMenu from '../../components/footer_menu';
+
 const cards = [
   {
-    text: 'Card One',
-    name: 'One',
-    image: require('./img/swiper-1.png'),
+    text: 'Brynn',
+    name: 'Williamsburg',
+    image: require('./images/brynn.jpg'),
   },
-  .  .  .
+  {
+    text: 'Anne',
+    name: 'Upper West Side',
+    image: require('./images/anne.jpg'),
+  },
 ];
-export default class DeckSwiperExample extends Component {
+
+// from https://docs.nativebase.io/Components.html#deckswiper-def-headref
+export default class Swipe extends Component {
   render() {
+      const { navigate } = this.props.navigation;
     return (
+      <View style={styles.container}>
       <Container>
-        <Header />
+        <Button
+        onPress={() => navigate('Explore')}>
+        <Header>
+          <Title>
+            WOMENTORS
+          </Title>
+        </Header>
+        </Button>
         <View>
           <DeckSwiper
             dataSource={cards}
@@ -21,10 +39,12 @@ export default class DeckSwiperExample extends Component {
               <Card style={{ elevation: 3 }}>
                 <CardItem>
                   <Left>
-                    <Thumbnail source={item.image} />
+                   {//  <Thumbnail source={item.image} /> }
+                   }
                     <Body>
                       <Text>{item.text}</Text>
-                      <Text note>NativeBase</Text>
+                    { // <Text note>Test</Text>
+                    }
                     </Body>
                   </Left>
                 </CardItem>
@@ -32,7 +52,7 @@ export default class DeckSwiperExample extends Component {
                   <Image style={{ height: 300, flex: 1 }} source={item.image} />
                 </CardItem>
                 <CardItem>
-                  <Icon name="heart" style={{ color: '#ED4A6A' }} />
+                  <LocIcon name="location-pin" style={{ color: '#ED4A6A', fontSize: 20 }} />
                   <Text>{item.name}</Text>
                 </CardItem>
               </Card>
@@ -40,6 +60,22 @@ export default class DeckSwiperExample extends Component {
           />
         </View>
       </Container>
+      <Button
+          title="my stax"
+          onPress={() =>
+            navigate('MyStax')
+          }
+        />
+      <FooterMenu/>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+  },
+});
