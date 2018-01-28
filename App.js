@@ -6,7 +6,6 @@ import Settings from './views/settings/main_page';
 import SplashPage from './views/splash_page';
 import Preferences from './views/settings/preferences';
 import MyProfile from './views/settings/my_profile';
-import Explore from './views/explore';
 import AboutHeystax from './views/settings/about_heystax';
 import Login from './views/login';
 import BrynnMessages from './views/messages/brynn';
@@ -15,9 +14,16 @@ import SimpleTabs from './simple_tabs_example';
 import Inbox from './views/inbox';
 import EditProfile from './views/edit_profile';
 import Swipe from './views/swiping_test';
+import Explore from './views/explore/start_grid';
+import Mentorship from './views/explore_select/mentorship';
+import Womentors from './views/explore/stax/womentors/about';
+import JoinWomentors from './views/explore/stax/womentors/join';
 
 const Heystax = StackNavigator({
+  JoinWomentors: {screen: JoinWomentors},
+  Womentors: {screen: Womentors},
   Explore: {screen: Explore},
+  Mentorship: {screen: Mentorship},
   Swipe: {screen: Swipe},
   Settings: {screen: Settings},
   Inbox: {screen: Inbox},

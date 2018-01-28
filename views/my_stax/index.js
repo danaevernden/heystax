@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, Button, DatePickerIOS } from 'react-native';
+import { StyleSheet, TextInput, View, DatePickerIOS } from 'react-native';
+import { Icon, List, ListItem, Header, Avatar, Button, Text, Content, Container } from 'react-native-elements';
 import { StackNavigator } from 'react-navigation';
 
 //flip between stax you are currently a member of - bumble view
@@ -9,6 +10,10 @@ export default class MyStax extends React.Component {
     return (
       <View style={styles.container}>
         <Text>my stax are here</Text>
+
+        <Button rounded info>
+          <Text>Info</Text>
+        </Button>
       </View>
     );
   }

@@ -6,7 +6,6 @@ import UsersIcon from 'react-native-vector-icons/Entypo';
 import StaxIcon from 'react-native-vector-icons/Feather';
 import MessagesIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-import Explore from '../../views/explore';
 
 //="#2DFFAB" accent color
 //also try icon footer with text from nativebase
