@@ -21,10 +21,12 @@
   "dependencies": {
     "@ptomasroos/react-native-multi-slider": "0.0.11",
     "expo": "^25.0.0",
+    "itypeof": "^1.1.2",
     "native-base": "^2.3.7",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-elements": "^0.19.0",
+    "react-native-facebook-login": "^1.6.0",
     "react-native-gifted-chat": "^0.3.0",
     "react-native-layout-grid": "0.0.2",
     "react-native-material-bottom-navigation": "^0.7.0",

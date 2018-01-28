@@ -36,6 +36,7 @@ export default class Settings extends React.Component {
         onPress={() => navigate('EditProfile')}
         activeOpacity={0.7}
       />
+      
       <Icon
         raised
         name='edit'
