@@ -6,12 +6,28 @@ import UsersIcon from 'react-native-vector-icons/Entypo';
 import StaxIcon from 'react-native-vector-icons/Feather';
 import MessagesIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { StackNavigator, TabNavigator } from 'react-navigation';
+import Settings from '../../views/settings/main_page';
 
 //="#2DFFAB" accent color
 //also try icon footer with text from nativebase
-export default class FooterMenu extends React.Component {
 
+type Props = {
+  navigate: () => void,
+  MyMatches: string
+}
+
+//const MyApp = TabNavigator({
+//  Settings: {screen: Settings}
+//});
+
+export default class FooterMenu extends React.Component {
+props:Props
   render() {
+
+    const {
+    navigate,
+    MyMatches
+  } = this.props;
 
     return (
       <BottomNavigation
@@ -32,7 +48,7 @@ export default class FooterMenu extends React.Component {
           barBackgroundColor="#FFFFFF"
           label="Likes You"
           icon={<UsersIcon size={24} color="#000000" name="users" />}
-          onTabChange={() =>  navigate('MyMatches')}
+          onTabChange={() =>  this.props.navigation.navigate(this.props.MyMatches)}
            // onPress={() => navigation.navigate('Swipe')}
         />
         <Tab
@@ -40,7 +56,7 @@ export default class FooterMenu extends React.Component {
           barBackgroundColor="#FFFFFF"
           label="Say Hey"
           icon={<MessagesIcon size={24} color="#000000" name="message-text-outline" />}
-          onTabChange={() =>  navigate('Messages')}
+          onTabChange={() =>  this.props.navigation.navigate('Inbox')}
            // onPress={() => navigation.navigate('Inbox')}
         />
         <Tab

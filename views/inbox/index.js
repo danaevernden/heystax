@@ -60,7 +60,10 @@ export default class Inbox extends React.Component {
            }>
          </List>
 
-        <FooterMenu/>
+        <FooterMenu
+        navigation = {this.props.navigation}
+        MyMatches = 'Swipe'
+        />
       </Container>
     );
   }

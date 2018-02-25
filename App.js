@@ -9,7 +9,7 @@ import MyProfile from './views/settings/my_profile';
 import AboutHeystax from './views/settings/about_heystax';
 import BrynnMessages from './views/messages/brynn';
 import AnneMessages from './views/messages/anne';
-import SimpleTabs from './simple_tabs_example';
+import SimpleTabs from './views/simple_tabs_example';
 import Inbox from './views/inbox';
 import EditProfile from './views/edit_profile';
 import Swipe from './views/swiping_test';
@@ -24,28 +24,28 @@ import YearsOfExperienceWidget from './views/widgets/years_of_experience_widget'
 import Test from './views/!test';
 
 const Heystax = StackNavigator({
-  Womentors: {screen: Womentors},
-  SplashPage: {screen: SplashPage},
+  Inbox: {screen: Inbox},
+  Mentorship: {screen: Mentorship},
   Explore: {screen: Explore},
+  MyStax: {screen: MyStax},
+  SplashPage: {screen: SplashPage},
   Settings: {screen: Settings},
   Swipe: {screen: Swipe},
+  Womentors: {screen: Womentors},
 
   //direct links
-  Inbox: {screen: Inbox},
 
   //views from buttons in app
+  AboutHeystax: {screen: AboutHeystax},
   EditProfile: {screen: EditProfile},
   Preferences: {screen: Preferences},
   DistanceWidget: {screen: DistanceWidget},
   QuestionsWidget: {screen: QuestionsWidget},
   AgeRangeWidget: {screen: AgeRangeWidget},
   YearsOfExperienceWidget: {screen: YearsOfExperienceWidget},
-  Mentorship: {screen: Mentorship},
-  MyStax: {screen: MyStax},
   JoinWomentors: {screen: JoinWomentors},
   BrynnMessages: {screen: BrynnMessages},
   AnneMessages: {screen: AnneMessages},
-  AboutHeystax: {screen: AboutHeystax},
   //testing
   Test: {screen: Test},
 

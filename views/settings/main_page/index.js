@@ -6,6 +6,9 @@ import PrefIcon from 'react-native-vector-icons/Octicons';
 import StaxIcon from 'react-native-vector-icons/Feather';
 import { Icon, List, ListItem, Header, Avatar } from 'react-native-elements';
 
+
+//add bordered button someday
+//get nativebase worked in
 const navigation = [
  {
     name: 'Preferences',
@@ -36,7 +39,7 @@ export default class Settings extends React.Component {
         onPress={() => navigate('EditProfile')}
         activeOpacity={0.7}
       />
-      
+
       <Icon
         raised
         name='edit'
